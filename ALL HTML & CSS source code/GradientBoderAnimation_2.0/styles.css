@@ -1,0 +1,48 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #151515;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 100vh;
+}
+
+/* ======================== */
+/* NOTE: This works on Chrome, but may not work correctly on other browsers. */
+.card {
+    width: 200px;
+    height: 250px;
+    background-color: #151515;
+    border: 5px solid;
+    /* The border image property will work in a similar manner as a background image. This will allow us to use a gradient for the border. The '1' specifies the border width. In this case using a single value means stretch 100% across all corners. You are able to set up to 4 values corresponding to each corner. */
+    border-image:
+        linear-gradient(#ff512f,
+            #dd2476,
+            #1c64ff) 1;
+    animation: rotate 2.5s ease-in infinite;
+}
+
+/* Here we simply at a keyframe to animate the gradient. To do so, we add in the same gradient, the only difference is that now we rotate the gradient by 360 degrees.  */
+@keyframes rotate {
+    50% {
+        border-image:
+            linear-gradient(360deg,
+                #ff512f,
+                #dd2476,
+                #1c64ff) 1;
+    }
+}

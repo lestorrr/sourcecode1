@@ -1,0 +1,88 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #242329;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+/* ======================== */
+#checkbox {
+    display: none;
+}
+
+.hamburger {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.line {
+    position: absolute;
+    width: 20px;
+}
+
+.line-main::before,
+.line-main::after,
+.line-split::before,
+.line-split::after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: 2px;
+    background-color: #fff;
+    transition: transform .5s;
+}
+
+.line-main::before {
+    transform: translateY(-7px);
+}
+
+.line-main::after {
+    transform: translateY(7px);
+}
+
+.line-split::before,
+.line-split::after {
+    width: 10px;
+    transition:
+        transform .5s, opacity .5s;
+}
+
+.line-split::after {
+    transform: translateX(10px);
+}
+
+#checkbox:checked~.line-main::before {
+    transform: rotate(45deg);
+}
+
+#checkbox:checked~.line-main::after {
+    transform: rotate(-45deg);
+}
+
+#checkbox:checked~.line-split::before {
+    transform: translateX(-10px);
+    opacity: 0;
+}
+
+#checkbox:checked~.line-split::after {
+    transform: translateX(20px);
+    opacity: 0;
+}

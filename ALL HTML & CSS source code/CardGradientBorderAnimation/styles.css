@@ -1,0 +1,66 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #151515;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: sans-serif;
+}
+/* ======================== */
+/* General card styles */
+.card{
+    color: #fff;
+    text-align: center;
+    background-color: #151515; /*Background color of the card. We have to set one so the gradient background does not show through allowing for the border effect.*/
+    padding: 25px;
+    border-radius: 8px; /*Rounds the corners a little.*/
+    position: relative; /*Position of relative because we will use position of absolute on the pseudo-element. This will make it so that the pseudo-element will not float away from the card.*/
+}
+/*Creating the gradient border with a pseudo-element. */
+.card::before{
+    content: ''; /*Set the content property to an empty string, if you don't set a content the element won't show.*/
+    position: absolute; /*Allows for this element to be freely moved within the parent box that has relative position.*/
+    top: 0;
+    left: 0;
+    width: calc(100% + 8px); /* We make this element 100% of the card with and height and add 8px so make it slightly larger.*/
+    height: calc(100% + 8px);
+    transform: translate(-4px, -4px); /*Now we use a negative translation to center this element in terms of the card. We use half of the extra 8px we gave it for width and height.*/
+    background: linear-gradient(60deg, #5ff281, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f) 0 50%; /*You can use a gradient of your choosing. I generated this one online.*/
+    background-size: 300% 300%; /*Setting the background size to a large number since we will be animating the background position via keyframes.*/
+    animation:  gradient-animation 2.5s alternate infinite; /*Applying the keyframe animation.*/
+    border-radius: 8px; /*Rounds the corners a little.*/
+    z-index: -1; /*Sends the the gradient background to the back of the card.*/
+}
+.card-title{
+    font-size: 45px;
+    margin-block: 25px;
+}
+.card-title span{
+    font-size: 16px;
+}
+.card-button{
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+/* 
+    The keyframe animation will have one stop at 50% where we change the background position from the default value to 100% on the X axis and 50% on the Y.
+    We alternate this animation and make it infinite when we apply it to the element we want to animate. 
+*/
+@keyframes gradient-animation {
+    50%{
+        background-position: 100% 50%;
+    }
+}

@@ -1,0 +1,36 @@
+/* CSS */
+.animated-background{
+    background: linear-gradient(
+        to right, #833ab4,
+        #fd1d1d, #fcb045); 
+    background-size: 400% 400%;
+    animation: animate-background 10s infinite ease-in-out;
+}
+
+@keyframes animate-background {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+/* 
+    If you're just testing out this effect, make sure that you add a width and height to be able to view it.
+    As it sits right now, it assumes the element you want to animate the background on already has a width and height.
+    Add a linear gradient of your choice (I used a generator online for this). Set the background size to a very large
+    number since we are going to be animating the background position. This is important else the background will clip.
+
+    Create a keyframe animation and add 3 stops, 0%, 50%, 100%. You can add as many as you want to get different effects.
+    The first value in background position is for the X coordinate and the second value is for the Y. From here you can
+    test out values to get a unique animation. Keep in mind that you have to start and end with the same position else
+    you will get random jumps. In this example we start at the middle, then we animate add 100% on the X coordinate at the 50%
+    stop to move the background to the right. At the 100% mark we go back to the initial position. 
+
+    Lastly, add the animation to your element, here I used 10 seconds for the duration because it looks more fluid than a faster
+    or slower movement. Then set the animation to be infinite so that it keeps going on forever.
+*/

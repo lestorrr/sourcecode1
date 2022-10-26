@@ -1,0 +1,89 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #111;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+/* ======================== */
+figure {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    background-color: #000;
+    overflow: hidden;
+}
+
+figure figcaption::before {
+    content: "";
+    position: absolute;
+    inset: 20px;
+    border: 2px solid #fff;
+    opacity: 0;
+    scale: 1.25;
+    transition: opacity 0.25s, scale 0.25s;
+}
+
+figure:hover figcaption::before {
+    opacity: 1;
+    scale: 1;
+}
+
+figure img {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    scale: 1.15;
+    transition: opacity 0.25s, scale 0.35s;
+}
+
+figure:hover img {
+    opacity: 0.5;
+    scale: 1;
+}
+
+figure figcaption {
+    position: absolute;
+    inset: 0;
+    padding: 50px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    justify-content: center;
+}
+
+figure h2 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+figure p {
+    font-size: 14px;
+    opacity: 0;
+    translate: -25px;
+    transition: opacity 0.25s, translate 0.25s;
+}
+
+figure:hover p {
+    opacity: 1;
+    translate: 0;
+}

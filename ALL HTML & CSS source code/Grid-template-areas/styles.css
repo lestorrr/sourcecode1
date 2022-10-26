@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #00FFB5 ;
+    /* Local font */
+    font-family: Clash Display Variable;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Demo */
+.showcase {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+}
+
+/* Selects every direct child and applies general styles for the demo */
+.showcase > * {
+    background-color: #162C27;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+}
+
+@media screen and (min-width: 64em) {
+    .showcase {
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: 50px repeat(2, 1fr) 50px;
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "sidebar main"
+            "sidebar footer";
+    }
+    .header {
+        grid-area: header;
+    }
+    .sidebar {
+        grid-area: sidebar;
+    }
+    .main {
+        grid-area: main;
+    }
+    .footer {
+        grid-area: footer;
+    }
+}

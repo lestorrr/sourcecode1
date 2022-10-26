@@ -1,0 +1,58 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #242329;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+/* ======================== */
+#checkbox {
+    display: none;
+}
+.hamburger {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.line {
+    position: absolute;
+    width: 21px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: 
+    transform .25s, opacity .35s;
+}
+.line--top {
+    transform: translateY(-7px);
+}
+.line--bottom {
+    transform: translateY(7px);
+}
+#checkbox:checked~.line--top {
+    transform: rotate(45deg);
+}
+#checkbox:checked~.line--middle {
+    transform: translateX(16px);
+    opacity: 0;
+}
+#checkbox:checked~.line--bottom {
+    transform: rotate(-45deg);
+}

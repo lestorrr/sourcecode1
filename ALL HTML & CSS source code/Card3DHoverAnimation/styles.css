@@ -1,0 +1,63 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background-color: #151515;
+    display: grid;
+    place-content: center;
+}
+/* ======================== */
+.cards{
+    perspective: 500px; /*In simple terms, in a 3D space, the perspective property will determine how far away or close to you the item will appear to be. The smaller the number the closer, the larger the farthest. Play around with the values to see the results. This effect will apply to the children that are transformed, since we are applying it to the card, we have to add the perspective to the parent of the card, the cards section. */
+}
+
+.card{
+    width: 200px;
+    height: 250px;
+    background: url('./monument.png') 
+    center no-repeat; /*Setting a background image via url. The position of the background will be center and the image will be set so that it does not repeat. */
+    background-size: cover; /*Setting the size of the background to cover will scale the image to fill the entire space of the container while preserving it's ratio.*/
+    border: 2px solid 
+    rgba(255, 255, 255, .25);
+    border-radius: 4px;
+    position: relative; /*Position of relative is set because of the title that we will have inside of here with position of absolute.*/
+    transform-style: preserve-3d; /*This will make the children of the card remain in a 3D space (the title). */
+    will-change: transform; /*Tells the user agent to expect a change on the transform property and prepares it for rendering. */
+    transition: transform .5s; /*Makes the animation smooth over .5 seconds. */
+}
+
+.card:hover{
+    transform: translateZ(10px)
+    rotateX(20deg) rotateY(30deg);
+    /*
+        The translateZ function repositions the element along the z-axis in 3D space, for example, closer to or farther away from the viewer.
+        The rotateX function will rotate the element in the X axis, rotateY on the Y axis.
+    */
+}
+
+.card-title{
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 10px 
+    rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    transition: transform .5s;
+}
+
+.card:hover .card-title{
+    transform: translateZ(50px);
+}
