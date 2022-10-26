@@ -1,0 +1,103 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #23222a;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+/* ======================== */
+.button {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    background: #f3f3f3;
+    font: inherit;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #3c2e9e;
+    border: none;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.button:focus {
+    animation: morph 1.25s forwards;
+}
+.button > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.plane {
+    display: none;
+}
+.sent,
+.button:focus span {
+    opacity: 0;
+    visibility: hidden;
+}
+.button:focus .sent {
+    animation: reveal 1s 1.25s forwards;
+}
+.button:focus .plane {
+    display: block;
+    animation: takeOff 1s forwards;
+}
+
+@keyframes reveal {
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes morph {
+    10%,
+    80% {
+        width: 50px;
+        border-radius: 50%;
+        background: #f3f3f3;
+        color: #3c2e9e;
+    }
+    100% {
+        background: #3c2e9e;
+        color: #f3f3f3;
+    }
+}
+@keyframes takeOff {
+    5%,
+    15%,
+    25%,
+    35%,
+    45% {
+        transform: translate(-47%, -50%);
+    }
+    10%,
+    20%,
+    30%,
+    40%,
+    50% {
+        transform: translate(-53%, -50%);
+    }
+    90% {
+        transform: translate(100px, -100px);
+    }
+    100% {
+        transform: translate(100px, -100px);
+    }
+}

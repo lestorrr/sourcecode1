@@ -1,0 +1,91 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #151515;
+    color: #fff;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+/* ======================== */
+/*Checkbox*/
+#menu-toggle{
+    display: none; /* Hides the checkbox from view*/
+}
+/*Container for the bars*/
+.hamburger{
+    width: 48px;
+    height: 48px;
+    background-color: #fff; /*Not important for the effect*/
+    position: relative; /*Position of relative is needed since we will use position absolute for child elements. Prevents them from floating out of the container.*/
+    cursor: pointer; /*Changes the cursor to make it appear clickable*/
+    border-radius: 3px; /*Not important for the effect*/
+}
+/*The outer bun is used for the rotation transition into an X.*/
+.bun{
+    width: 30px;
+    height: 30px;
+    position: absolute; /*Makes it so that we can freely move around this element inside the parent with position of relative by using either top, left, right, or bottom values.*/
+    top: 9px; /*Starting position from the top - centering purposes.*/
+    left: 9px; /*Starting position from the left - centering purposes.*/
+    transition: transform .18s cubic-bezier(0.04, 0.04, 0.12, 0.96) .15s; /*Adding a transition on the transform property over .18 seconds and a delay of .15 seconds.*/
+    /* 
+        A Cubic Bezier curve is defined by four points P0, P1, P2, and P3.
+        P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios.
+        P0 is (0, 0) and represents the initial time and the initial state, P3 is (1, 1) and represents the final time and the final state.
+    */
+}
+/*The inner bun is used for the general bars styles moving up and down the bars when transitioning into the X and back.*/
+.bun-crust{
+    display: block; /*Span elements are display: inline by default, we make it a block */
+    width: 17px;
+    height: 1px;
+    background-color: #151515;
+    border-radius: 1px; /*Rounds the corners of the bars a little*/
+    position: absolute; /*Makes it so that we can freely move around this element inside the parent with position of relative by using either top, left, right, or bottom values.*/
+    left: 7px; /*Starting position from the left - centering purposes.*/
+    transition: transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .2s; /*Adding a transition on the transform property over .1596 seconds and a delay of .2 seconds.*/
+    /* 
+        A Cubic Bezier curve is defined by four points P0, P1, P2, and P3.
+        P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios.
+        P0 is (0, 0) and represents the initial time and the initial state, P3 is (1, 1) and represents the final time and the final state.
+    */
+}
+/*Selecting the buns individually to apply different styles without clashing.*/
+.bun-crust-top{
+    top: 14px; /*Starting position from the top - centering purposes based on the parent's height (hamburger container).*/
+    transform: translateY(-3px); /*Moves the bar up to create spacing between them.*/
+}
+.bun-crust-bottom{
+    bottom: 14px; /*Starting position from the bottom - centering purposes based on the parent's height (hamburger container).*/
+    transform: translateY(3px); /*Moves the bar down to create spacing between them.*/
+}
+/*
+    Here we form the X; We have to use the Adjacent sibling combinator (+) to trigger the click event.
+    This click event triggers when the checkbox is checked, so we use the :checked pseudo class to see if it has been checked or not.
+    If it has been checked then we select the sibling (the label - hamburger container) next to it by using the + sign. Since we connected the
+    checkbox and label by using the checkbox id in the 'for' attribute of the label, this allows for the checkbox to be checked by just clicking
+    the label. We hid the checkbox since we don't need to see it to click it.
+*/
+#menu-toggle:checked + .hamburger .bun-top{
+    transform: rotate(45deg); /*Selecting the bun-top that is inside the hamburger container when the checkbox is checked and rotating the bar by 45 degrees.*/
+}
+#menu-toggle:checked + .hamburger .bun-bottom{
+    transform: rotate(-45deg); /*Selecting the bun-bottom that is inside the hamburger container when the checkbox is checked and rotating the bar by -45 degrees.*/
+}
+/*
+    The same concept as before except that now we select the bun-crust top and bottom to reset the 3px/-3px transform we applied earlier.
+    This where the bars will move up and down as we reset the transform. Then we apply a transition to animate the movement.
+*/
+#menu-toggle:checked + .hamburger .bun-crust-top,
+#menu-toggle:checked + .hamburger .bun-crust-bottom{
+    transform: none;
+    transition: transform .1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+}

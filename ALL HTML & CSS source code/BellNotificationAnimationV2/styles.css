@@ -1,0 +1,81 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #60a6bb;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: sans-serif;
+}
+/* ======================== */
+.icon-wrapper{
+    width: 50px; /*Overall width - size of the icon*/
+    height: 50px; /*Overall height - size of the icon*/
+    position: relative; /*Position of relative because we will have an element inside with position of absolute. This prevents the element with position of absolute from floating away from this box.*/
+}
+/* The ::after pseudo-element */
+.icon-wrapper::after{
+    content: attr(data-number); /*Passing in the data attribute we added within the html. The number will show here.*/
+    width: 20px; /*Overall width - size of the bubble*/
+    height: 20px; /*Overall height - size of the bubble*/
+    background-color: #d32b2b;
+    color: #fff;
+    display: grid; /*Turns this element into a grid container. It will allow us to use the place content property to center the notification number.*/
+    place-content: center; /*Places the notification number in the middle of the bubble both vertically and horizontally.*/
+    border-radius: 50%; /*Makes the bubble round.*/
+    position: absolute; /*Allows us to move the element freely inside the icon wrapper box.*/
+    top: 5px; /*Positioning the bubble 5px from the top starting point.*/
+    right: 0; /*Positioning the bubble 5px from the right starting point.*/
+    opacity: 0; /*Hides the bubble from view.*/
+    transform: translateY(3px); /*Moves the bubble down slightly - used for the moving up animation later.*/
+}
+/*
+    Selecting the icon wrapper and applying the following effects to the pseudo-element when the icon-wrapper is hovered.
+    Note: In this real world you wouldn't do this effect on hover, but when the notification event is triggered based on the
+    language you are using to handle this. Example: JavaScript/Node and so on. I am using hover for demo purposes.
+*/
+.icon-wrapper:hover::after{
+    opacity: 1; /*Shows the element again - We hide it by default.*/
+    transform: translateY(0); /*Moves the element up slightly - We move it down by default.*/
+    transition: opacity .25s, transform .25s; /*Adds a transition on the properties we want to animate over .25 seconds.*/
+}
+.bell-icon{
+    max-width: 100%; /*Makes the icon image only make up 100% of the icon wrapper width and no more than that.*/
+}
+.icon-wrapper:hover .bell-icon{
+    animation: shake 1s forwards; 
+    /*
+        Applies the shake keyframe animation to the bell icon when the icon wrapper is hovered.
+        Note: Again, you wouldn't do this on hover in the real world. This is for demo purposes.
+        The shake animation will last 1 second and the animation fill mode will be forwards. Forwards
+        means that the animation will stay on the last step of the keyframe once it ends (50% - rotate(0 degrees).
+    */
+}
+/*
+    Creating the keyframe animation. It will have 4 steps at 10% increments except for the last one
+    where it will be incremented by 20% to give it a slightly longer pause before it gets to the end.
+    The first step it will rotate by 15 degrees, then move back by setting the same value but as a negative
+    number, then again positive to make the bell move back to the starting position when initially hovered, and finally we give it a
+    neutral rotation of 0.
+*/
+@keyframes shake {
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+}

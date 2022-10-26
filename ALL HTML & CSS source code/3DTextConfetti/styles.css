@@ -1,0 +1,78 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #242329;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+/* ======================== */
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    line-height: 1;
+    color: #fff;
+    animation:
+        animateText 5s infinite;
+}
+
+.title span {
+    display: block;
+}
+
+.message {
+    font-weight: 500;
+}
+
+.followers {
+    font-weight: 700;
+    font-size: 70px;
+    background-image: linear-gradient(90deg, rgba(94, 114, 235, 1) 0%, #ff9190 56%, #fec195 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes animateText {
+
+    0%,
+    100% {
+        transform: rotate3d(1, 1, 0, 60deg);
+    }
+
+    25% {
+        transform: rotate3d(-1, 1, 0, -60deg);
+    }
+
+    50% {
+        transform: rotate3d(-1, -1, 0, 30deg);
+    }
+
+    75% {
+        transform: rotate3d(-1, 1, 0, -30deg);
+    }
+}
+
+.btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

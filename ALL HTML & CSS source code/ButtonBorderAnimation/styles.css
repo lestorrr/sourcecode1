@@ -1,0 +1,71 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* General styles */
+body{
+    background-color: #1a1b26;
+    font-family: 'Poppins', sans-serif;
+}
+/* General styles end */
+
+.button{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 25px;
+    color: #1fe8b6;
+    padding: 20px 50px;
+    border: 3px solid #1fe8b6;
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button::before,
+.button::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: inherit;
+    transition: all .5s ease-in;
+}
+
+.button::before{
+    top: -15px;
+    left: -15px;
+    border-width: 3px 0 0 3px;
+}
+
+.button::after{
+    bottom: -15px;
+    right: -15px;
+    border-width: 0 3px 3px 0;
+}
+
+.button:hover::before,
+.button:hover::after{
+    width: calc(100% + 27px);
+    height: calc(100% + 27px);
+}
+
+
+/*
+Explanation
+
+First, create a button with the desired styles.
+Since we are going to be using pseudo elements,
+it’s important that you add the position property and set it to relative.
+Now, create the pseudo elements before and after.
+Since they both share some styles, we will select them both and apply those said styles.
+The width and height are set to 40px.
+This number could be smaller or larger depending on the look you want.
+We also inherit the border styles from the parent and then add a transition for the animation.
+
+Now, select the pseudo elements individually to offset the starting top, left, right, and bottom positions by using a negative value.
+Then use the shorthand border-width property to target the top and left width for the :before and right and bottom for the :after.
+
+Finally, select both buttons once more and specify that you want a :hover state noting that you want the styles to apply to the pseudo elements.
+We use the calc() function to grow the elements by 100%, but since we offset the initial position we have to compensate for that so we add an extra 27px.
+Note: if you create a smaller or larger button, this value of 27px will change, so play around with the numbers until it aligns properly.
+*/

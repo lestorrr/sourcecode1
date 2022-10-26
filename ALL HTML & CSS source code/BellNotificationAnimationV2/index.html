@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bell notification animation V2</title>
+    <!-- Link to your stylesheet -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+        <!-- 
+            We will use this icon wrapper to create a pseudo-element for the notification bubble. We set a data attribute with the value of 1.
+            This data attribute will be the content (the number of notifications) within the bubble.
+        -->
+        <div class="icon-wrapper" data-number="1">
+            <!-- Icon image. You could use font icons in a real world project (Remix icons, ion icons, font awesome, etc...) -->
+            <img src="./images/bell_icon.svg" alt="" class="bell-icon">
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple.com hamburger menu animation</title>
+    <!-- Link to your stylesheet -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    
+    <!-- 
+        The checkbox will be used to trigger the click event.
+        Checking it and un-checking it will allow you to change the icon into and X and back to normal.
+        We apply an id because we will use the id to pair the checkbox to the label. This is crucial to
+        make the click event work.
+    -->
+    <input type="checkbox" id="menu-toggle">
+    <!-- 
+        We wrap all the markup that is relevant to the hamburger menu inside a label. Again, this is crucial
+        to make this click even work without JavaScript. We pair the label to the checkbox by passing in the
+        checkbox's id (menu-toggle) inside the label's for="" attribute. 
+    -->
+    <label for="menu-toggle" class="hamburger">
+        <!--
+            To make this effect work, animation wise, we have to nest buns inside buns since apple uses 2 different
+            transition effects for their hamburger menu animation. We apply a bun class for general bun styles, then
+            a secondary class of top and bottom to modify these elements individually. The outer bun will have the
+            rotation transition.
+
+            The inner buns (bun-crust) will determine the overall width and height of the bars as well as the spacing
+            between them. The same concept applies as before with the additional top and bottom classes. The inner buns
+            will have the transition effect for animating the up and down movement before and after turning into an X.
+        -->
+        <span class="bun bun-top">
+            <span class="bun-crust bun-crust-top"></span>
+        </span>
+        <span class="bun bun-bottom">
+            <span class="bun-crust bun-crust-bottom"></span>
+        </span>
+    </label>
+
+</body>
+</html>

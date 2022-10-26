@@ -1,0 +1,45 @@
+/* General styles */
+body{
+    background-color: #34b0fa;
+}
+/* General styles end */
+.icon-wrapper{
+    width: 50px;
+    height: 50px;
+    padding: 25px;
+    background-color: #1a1b26;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.icon{
+    max-width: 100%;
+}
+.icon-wrapper:hover .icon{
+    animation: shake 1s forwards;
+}
+@keyframes shake {
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+}
+
+/* 
+First, we start by selecting the icon wrapper; this is only used for styling purposes.
+The thing that matters the most is the icon itself. Feel free to modify it to fit your needs.
+
+Since we are using an image, make it so that it can't grow larger than the parent container
+by giving it a max-width.
+
+Create a keyframe animation and apply as many stops as you want. Here, I used 3 at 10% increments to make the animation look natural. Then rotate by 15deg (this could be more or less. It's up to you), then make the value negative to reverse it on the next step. Repeat the same process for the next step with the same positive value. The last stop is made slightly larger to create a longer pause.
+
+Add the animation to the icon inside the wrapper when the wrapper is hovered. Forwards means that it will keep the styles from the last stop (rotate 0deg). In the real world you wouldn't do this on hover, but instead you would add the animation when a notification is pushed (whether you're using Javascript or something else). 
+*/

@@ -1,0 +1,76 @@
+/* Import font from google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #833ab4;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    margin: 0;
+    padding: 0;
+}
+/* ======================== */
+.button{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    outline: 2px solid #fff;
+    padding: 30px 60px;
+    position: relative;
+    overflow: hidden;
+    transition: color 1s;
+}
+
+.button:hover{
+    color: #833ab4;
+}
+
+.button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 150%;
+    height: 100%;
+    background-color: #fff;
+    transform: scaleX(0) skewX(35deg);
+    transform-origin: left;
+    z-index: -1;
+    transition: transform 1s;
+}
+
+.button:hover::before{
+    transform: scaleX(1) skewX(35deg);
+}
+/* 
+    Note: If I don't mention a property/properties it means that they are self explanatory.
+
+    Select the button and apply whatever styles are relevant to the look you want. The only important 'must have'
+    properties that you have to add are the position of relative since we will be using a pseudo-element to
+    generate the growing skewed background effect. Another important property we must add is the overflow of
+    hidden. This will hide whatever is outside the button giving you the perfect button fill.
+
+    I'm then selecting the button when it's hovered to apply a basic color change since the background will be white.
+    If we leave the color as white it will blend in with the pseudo-element's background color. I add a transition delay
+    to slow down the color animation in relation the background color from the pseudo-element.
+
+    We now create the pseudo-element. We set the content to be an empty string, if you don't add this, the element will not
+    show up. We set the position to absolute, since we gave the button the position of relative, this pseudo-element is
+    now absolute positioned to the button. This means it will stay inside it's parent container, the button.
+    We set a starting top position of 0, then a left of -50px to move it outside so the clipped edges will not show after
+    skewing. Since we want to grow this element on hover, we set the width to 0. We then use the transform property and
+    use SkewX of 35 degrees. This number can be smaller or larger, it's up to you. Keep in mind though, if you make it larger
+    you will have to account for it by making the width on hover larger. Lastly, we add a transition to the width over 1 second,
+    this will make the animation nicer.
+
+    The last step is to select the button on hover and specify that the following styles should be applied to the ::before
+    pseudo-element. I applied a width of 150% to compensate for the negative left value as well as the skewing. If your button
+    doesn't fill all the way, make this value larger until it does.
+*/

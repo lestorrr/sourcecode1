@@ -1,0 +1,69 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #151515;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 100vh;
+}
+
+/* ======================== */
+/* Hide the checkbox from view */
+#toggle {
+    display: none;
+}
+
+.button {
+    display: inline-block;
+    width: 90px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.button::after {
+    content: url('./images/sun-line.svg');
+    /* Add in the image. You could also add an icon by the using the icon's unicode (sites like fontawesome.com provide this). */
+    width: 40px;
+    height: 40px;
+    /* Making the icon slightly taller than the button container. */
+    background-color: #e03c3c;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+    position: absolute;
+    top: -5px;
+    /* Since the button has a height of 35px and the ::after has 40px, we offset the difference by pushing it up by 5px to center this element vertically. */
+    left: 0;
+    display: grid;
+    /* Used for centering the icon image in the middle in conjunction with place content center. */
+    place-content: center;
+    line-height: 0;
+    /*By default this will have a line height. This means that the image will not be perfectly centered by using the properties above. To make sure we can center this image in the middle, we make the line height 0. */
+    transition: background-color 1s,
+        transform 1s ease-in;
+}
+
+#toggle:checked+.button::after {
+    content: url('./images/moon-line.svg');
+    /* Switching the images when clicked. */
+    background-color: #1f257f;
+    transform: translateX(50px) rotate(360deg);
+    /* Since the width of the button is 90px and the pseudo element is 40px we translate by a number that adds up to 90. So we translate to the right by 50px ( 40 + 50 = 90 width of the button). We also rotate this element by 360 degrees. */
+}
