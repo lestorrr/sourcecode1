@@ -1,0 +1,21 @@
+C:\Users\Mark\Desktop\Student Grading System in C#\bin\Debug\Student Grading System.exe.config
+C:\Users\Mark\Desktop\Student Grading System in C#\bin\Debug\Student Grading System.exe
+C:\Users\Mark\Desktop\Student Grading System in C#\bin\Debug\Student Grading System.pdb
+C:\Users\Mark\Desktop\Student Grading System in C#\obj\Debug\Student Grading System.csprojAssemblyReference.cache
+C:\Users\Mark\Desktop\Student Grading System in C#\obj\Debug\Univesity_Grade_Calculator.Form1.resources
+C:\Users\Mark\Desktop\Student Grading System in C#\obj\Debug\Student_Grading_System.Properties.Resources.resources
+C:\Users\Mark\Desktop\Student Grading System in C#\obj\Debug\Student Grading System.csproj.GenerateResource.cache
+C:\Users\Mark\Desktop\Student Grading System in C#\obj\Debug\Student Grading System.csproj.CoreCompileInputs.cache
+C:\Users\Mark\Desktop\Student Grading System in C#\obj\Debug\Student Grading System.exe
+C:\Users\Mark\Desktop\Student Grading System in C#\obj\Debug\Student Grading System.pdb
+C:\Users\acer\Desktop\C# CSHARP\Student Grading System in C#\bin\Debug\Student Grading System.exe.config
+C:\Users\acer\Desktop\C# CSHARP\Student Grading System in C#\bin\Debug\Student Grading System.exe
+C:\Users\acer\Desktop\C# CSHARP\Student Grading System in C#\bin\Debug\Student Grading System.pdb
+C:\Users\acer\Desktop\C# CSHARP\Student Grading System in C#\obj\Debug\Student Grading System.csproj.AssemblyReference.cache
+C:\Users\acer\Desktop\C# CSHARP\Student Grading System in C#\obj\Debug\Student Grading System.csproj.SuggestedBindingRedirects.cache
+C:\Users\acer\Desktop\C# CSHARP\Student Grading System in C#\obj\Debug\Univesity_Grade_Calculator.Form1.resources
+C:\Users\acer\Desktop\C# CSHARP\Student Grading System in C#\obj\Debug\Student_Grading_System.Properties.Resources.resources
+C:\Users\acer\Desktop\C# CSHARP\Student Grading System in C#\obj\Debug\Student Grading System.csproj.GenerateResource.cache
+C:\Users\acer\Desktop\C# CSHARP\Student Grading System in C#\obj\Debug\Student Grading System.csproj.CoreCompileInputs.cache
+C:\Users\acer\Desktop\C# CSHARP\Student Grading System in C#\obj\Debug\Student Grading System.exe
+C:\Users\acer\Desktop\C# CSHARP\Student Grading System in C#\obj\Debug\Student Grading System.pdb

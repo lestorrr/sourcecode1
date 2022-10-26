@@ -1,0 +1,21 @@
+F:\C#\Univesity Grade Calculator\bin\Debug\Univesity Grade Calculator.exe.config
+F:\C#\Univesity Grade Calculator\bin\Debug\Univesity Grade Calculator.exe
+F:\C#\Univesity Grade Calculator\bin\Debug\Univesity Grade Calculator.pdb
+F:\C#\Univesity Grade Calculator\obj\Debug\Univesity Grade Calculator.csproj.AssemblyReference.cache
+F:\C#\Univesity Grade Calculator\obj\Debug\Univesity Grade Calculator.csproj.SuggestedBindingRedirects.cache
+F:\C#\Univesity Grade Calculator\obj\Debug\Univesity_Grade_Calculator.Form1.resources
+F:\C#\Univesity Grade Calculator\obj\Debug\Univesity_Grade_Calculator.Properties.Resources.resources
+F:\C#\Univesity Grade Calculator\obj\Debug\Univesity Grade Calculator.csproj.GenerateResource.cache
+F:\C#\Univesity Grade Calculator\obj\Debug\Univesity Grade Calculator.csproj.CoreCompileInputs.cache
+F:\C#\Univesity Grade Calculator\obj\Debug\Univesity Grade Calculator.exe
+F:\C#\Univesity Grade Calculator\obj\Debug\Univesity Grade Calculator.pdb
+D:\work\asp.net C#\Grade-Calculator-master\Univesity Grade Calculator\bin\Debug\Univesity Grade Calculator.exe.config
+D:\work\asp.net C#\Grade-Calculator-master\Univesity Grade Calculator\bin\Debug\Univesity Grade Calculator.exe
+D:\work\asp.net C#\Grade-Calculator-master\Univesity Grade Calculator\bin\Debug\Univesity Grade Calculator.pdb
+D:\work\asp.net C#\Grade-Calculator-master\Univesity Grade Calculator\obj\Debug\Univesity Grade Calculator.csprojAssemblyReference.cache
+D:\work\asp.net C#\Grade-Calculator-master\Univesity Grade Calculator\obj\Debug\Univesity_Grade_Calculator.Form1.resources
+D:\work\asp.net C#\Grade-Calculator-master\Univesity Grade Calculator\obj\Debug\Univesity_Grade_Calculator.Properties.Resources.resources
+D:\work\asp.net C#\Grade-Calculator-master\Univesity Grade Calculator\obj\Debug\Univesity Grade Calculator.csproj.GenerateResource.cache
+D:\work\asp.net C#\Grade-Calculator-master\Univesity Grade Calculator\obj\Debug\Univesity Grade Calculator.csproj.CoreCompileInputs.cache
+D:\work\asp.net C#\Grade-Calculator-master\Univesity Grade Calculator\obj\Debug\Univesity Grade Calculator.exe
+D:\work\asp.net C#\Grade-Calculator-master\Univesity Grade Calculator\obj\Debug\Univesity Grade Calculator.pdb
