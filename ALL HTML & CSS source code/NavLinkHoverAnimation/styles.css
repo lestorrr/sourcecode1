@@ -1,0 +1,65 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #151515;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    height: 100vh;
+    padding-top: 5rem;
+}
+
+.container {
+    max-width: 960px;
+    margin-inline: auto;
+    padding-inline: 15px;
+}
+/* ======================== */
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: 
+    space-between;
+}
+.nav__logo{
+    color: #fff;
+}
+.nav__list{
+    list-style: none;
+    display: flex;
+    column-gap: 20px;
+}
+.nav__link{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+.nav__link::after{
+    content: '';
+    position: absolute;
+    left: 0;bottom: 0;
+    width: 100%;height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+.nav__link:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}

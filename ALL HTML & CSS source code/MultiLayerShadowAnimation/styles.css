@@ -1,0 +1,59 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e1f26;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 100vh;
+}
+
+html {
+    font-size: 100%;
+}
+
+/* ======================== */
+
+.card {
+    width: 150px;
+    height: 200px;
+    background: #ffffff;
+    border-radius: 4px;
+    transform:
+        rotate(20deg) skew(-10deg, -5deg);
+    /* To compensate for the rotation we also add a skew on both the X and Y axis to make the rotation effect look more pleasing. No specific reason for the values, just play around with the numbers until you get a result that looks good to you.*/
+    transition: box-shadow .25s ease-in;
+}
+
+/* Layering shadows with different offsets on the X and Y to get the layer effect. We use the same white color with different transparency (alpha) levels to create the see-thru effect. */
+.card:hover {
+    box-shadow:
+        rgba(255, 255, 255, 0.5) 5px 3px,
+        rgba(255, 255, 255, 0.4) 10px 6px,
+        rgba(255, 255, 255, 0.3) 15px 9px;
+}
+
+/* ==== NOT IMPORTANT - USED FOR THE DEMO EMOJI/TEXT ==== */
+.card {
+    display: grid;
+    place-content: center;
+    font-size: 50px;
+}
+
+span {
+    font-size: 14px;
+}
+/* ==== NOT IMPORTANT - USED FOR THE DEMO EMOJI/TEXT ==== */

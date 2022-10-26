@@ -1,0 +1,56 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #242329;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+/* ======================== */
+.input-group{
+    position: relative;
+}
+.input{
+    font: inherit;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    padding-block: 5px;
+}
+.input::placeholder {
+    color: inherit;
+    transition: opacity .25s;
+}
+.input:focus::placeholder {
+    opacity: 0;
+}
+.border-bottom{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #bb93fc;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s;
+}
+.input:focus + .border-bottom,
+.input:valid + .border-bottom {
+    transform: scaleX(1);
+}

@@ -1,0 +1,55 @@
+/* Import font from google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d161f;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    margin: 0;
+    padding: 0;
+}
+/* ======================== */
+/* We define the overall with and height of this element.
+You can make it bigger or smaller. */
+.loader-wrapper {
+    width: 60px;
+    height: 60px;
+}
+.loader {
+    box-sizing: border-box; /* box-sizing: border-box makes it so that the padding is calculated inside of the element and not outside. You can remove this to see what happens. */
+    width: 100%; /* Takes up the entire with of the parent (.loader-wrapper 60px) */
+    height: 100%; /* Takes up the entire height of the parent (.loader-wrapper 60px) */
+    border: 5px solid #162534; /* The border: is going to be the thickness of the ring & a solid color is added. */
+    border-top-color: #4bc8eb; /* We target specific parts of the border and change the color */
+    border-bottom-color: #f13a8f; /* We target specific parts of the border and change the color */
+    border-radius: 50%; /* Makes the element a circle */
+    animation: rotate 5s linear infinite; /* Applies the keyframe animation by using the name, duration of 5 seconds, timing function linear, and the iteration to run infinitely. */
+}
+/* Selecting the inner loader and modifying the colors and the duration of the animation to make it different from the original loader */
+.loader-inner{
+    border-top-color: #36f372;
+    border-bottom-color: #fff;
+    animation-duration: 2.5s;
+}
+/* 
+    We set 3 stops, 0% state will be the normal starting point for the scale while rotating.
+    The 50% stop we make the scaling slightly smaller and rotate the element in reverse.
+    The 100% stop just goes to the initial state. The animation will basically repeat over and over. 
+*/
+@keyframes rotate {
+    0%{
+        transform: scale(1) rotate(360deg);
+    }
+    50%{
+        transform: scale(.8) rotate(-360deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}

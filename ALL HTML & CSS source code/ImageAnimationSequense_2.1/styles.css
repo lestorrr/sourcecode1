@@ -1,0 +1,106 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #151515;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    padding: 5px;
+    color: #fff;
+}
+
+/* ======================== */
+
+.scene {
+    width: 310px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.scene img {
+    width: 100%;
+    position: absolute;
+    object-fit: contain;
+}
+
+.wave {
+    position: absolute;
+    background-repeat: repeat-x;
+    background-size: 125px;
+    width: 1000px;
+    height: 60px;
+    bottom: -20px;
+    left: -50%;
+    animation: wave 8s infinite linear;
+}
+
+.wave-paint {
+    background-image:
+        url('./wave-paint.png');
+}
+
+.wave-plain {
+    background-image:
+        url('./wave-plain.png');
+}
+
+.wave:nth-child(2) {
+    bottom: 10px;
+    left: -46%;
+    animation-duration: 7s;
+}
+
+.wave:nth-child(3) {
+    bottom: 0;
+    left: -58%;
+    animation-duration: 6s;
+}
+
+.wave:nth-child(5) {
+    bottom: -10px;
+    left: -62%;
+    animation-duration: 5s;
+}
+
+.lh {
+    width: 80px;
+    height: 80px;
+    bottom: 15px;
+    right: -70px;
+    transform-origin: bottom;
+    animation: lighthouse 4s infinite alternate ease-in-out;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg) translateY(5px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(5px) rotate(-360deg);
+    }
+}
+
+@keyframes lighthouse {
+    0% {
+        transform: translateX(5px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateX(-15px) rotate(-10deg);
+    }
+}

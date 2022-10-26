@@ -1,0 +1,46 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background-color: #1f2d3a;
+    display: grid;
+    place-content: center;
+}
+/* ======================== */
+.list{
+    list-style: none; /*Removes the default bullet points that an unordered list has. */
+    text-align: center; /*Aligning the text to the center is not important. It all depends on the look you're going for. */
+}
+.link{
+    display: inline-block; /*By default, anchor tags will be display of inline. We change this behavior to inline-block so that i will allow for the use of margin top and bottom.*/
+    margin-block: 2px; /*Short hand property for margin top and bottom. Creates 2px os separation on the top and bottom of the element. */
+    text-decoration: none; /*Gets rid of the underline that anchor tags have by default.*/
+    color: #fff;
+    position: relative; /*Relative positioning is required for the pseudo-element we will create since it will have position of absolute. */
+}
+.link::after{
+    content: ''; /*Content property must be set else this element will not show up on the page. */
+    width: 100%;
+    height: 1px;
+    background-color: #fed86b;
+    border-radius: 4px; /*Applies roundness to the bar. */
+    position: absolute; /*Allows for this element to be moved freely within the parent box that has the position of relative. */
+    left: 0; /*Starting left position will be 0. */
+    bottom: 0; /*Starting bottom position will be 0 since we want to place this element under the link text. */
+    transform: scaleX(0); /*We scale the width of this element on the X axis to 0 because we do not want to see it until hovered. */
+    transform-origin: left; /*By default, transform origin is the center, meaning the bar would grow from the center if we don't change this. We set it to the left so that it grows from the left instead. */
+    transition: transform .25s ease; /*Since we want to animate the transform property that is what we apply the transition to. */
+}
+.link:hover::after{
+    transform: scaleX(1); /*When the link is hovered, we target the pseudo-element and turn the scaleX back to 1. This will make it grow back to the initial width of 100%. */
+}
