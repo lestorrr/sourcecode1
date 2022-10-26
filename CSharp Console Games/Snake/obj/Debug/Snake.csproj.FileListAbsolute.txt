@@ -1,0 +1,7 @@
+E:\Projects for code-projects\game\CSharpConsoleGames-master\Snake\bin\Debug\Snake.exe.config
+E:\Projects for code-projects\game\CSharpConsoleGames-master\Snake\bin\Debug\Snake.exe
+E:\Projects for code-projects\game\CSharpConsoleGames-master\Snake\bin\Debug\Snake.pdb
+E:\Projects for code-projects\game\CSharpConsoleGames-master\Snake\obj\Debug\Snake.csprojAssemblyReference.cache
+E:\Projects for code-projects\game\CSharpConsoleGames-master\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+E:\Projects for code-projects\game\CSharpConsoleGames-master\Snake\obj\Debug\Snake.exe
+E:\Projects for code-projects\game\CSharpConsoleGames-master\Snake\obj\Debug\Snake.pdb
