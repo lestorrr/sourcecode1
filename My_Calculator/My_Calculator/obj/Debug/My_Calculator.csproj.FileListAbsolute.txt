@@ -1,0 +1,19 @@
+c:\users\omar\documents\visual studio 2013\Projects\My_Calculator\My_Calculator\bin\Debug\My_Calculator.exe.config
+c:\users\omar\documents\visual studio 2013\Projects\My_Calculator\My_Calculator\bin\Debug\My_Calculator.exe
+c:\users\omar\documents\visual studio 2013\Projects\My_Calculator\My_Calculator\bin\Debug\My_Calculator.pdb
+c:\users\omar\documents\visual studio 2013\Projects\My_Calculator\My_Calculator\obj\Debug\My_Calculator.csprojResolveAssemblyReference.cache
+c:\users\omar\documents\visual studio 2013\Projects\My_Calculator\My_Calculator\obj\Debug\My_Calculator.Properties.Resources.resources
+c:\users\omar\documents\visual studio 2013\Projects\My_Calculator\My_Calculator\obj\Debug\My_Calculator.csproj.GenerateResource.Cache
+c:\users\omar\documents\visual studio 2013\Projects\My_Calculator\My_Calculator\obj\Debug\My_Calculator.exe
+c:\users\omar\documents\visual studio 2013\Projects\My_Calculator\My_Calculator\obj\Debug\My_Calculator.pdb
+C:\Users\acer\Desktop\C# CSHARP\My_Calculator\My_Calculator\bin\Debug\My_Calculator.exe.config
+C:\Users\acer\Desktop\C# CSHARP\My_Calculator\My_Calculator\bin\Debug\My_Calculator.exe
+C:\Users\acer\Desktop\C# CSHARP\My_Calculator\My_Calculator\bin\Debug\My_Calculator.pdb
+C:\Users\acer\Desktop\C# CSHARP\My_Calculator\My_Calculator\obj\Debug\My_Calculator.csproj.AssemblyReference.cache
+C:\Users\acer\Desktop\C# CSHARP\My_Calculator\My_Calculator\obj\Debug\My_Calculator.csproj.SuggestedBindingRedirects.cache
+C:\Users\acer\Desktop\C# CSHARP\My_Calculator\My_Calculator\obj\Debug\My_Calculator.Properties.Resources.resources
+C:\Users\acer\Desktop\C# CSHARP\My_Calculator\My_Calculator\obj\Debug\My_Calculator.csproj.GenerateResource.cache
+C:\Users\acer\Desktop\C# CSHARP\My_Calculator\My_Calculator\obj\Debug\My_Calculator.csproj.CoreCompileInputs.cache
+C:\Users\acer\Desktop\C# CSHARP\My_Calculator\My_Calculator\obj\Debug\My_Calculator.exe
+C:\Users\acer\Desktop\C# CSHARP\My_Calculator\My_Calculator\obj\Debug\My_Calculator.pdb
+C:\Users\acer\Desktop\C# CSHARP\My_Calculator\My_Calculator\obj\Debug\My_Calculator.Calculator.resources
